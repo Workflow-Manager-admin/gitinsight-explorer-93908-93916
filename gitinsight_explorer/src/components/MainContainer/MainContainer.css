@@ -1,0 +1,211 @@
+/* MainContainer.css - Styles for the main container component */
+
+.gitinsight-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--kavia-dark);
+}
+
+/* Header Styles */
+.main-header {
+  background-color: var(--kavia-dark);
+  border-bottom: 1px solid var(--border-color);
+  padding: 0 24px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.logo-symbol {
+  color: var(--kavia-orange);
+}
+
+.logo-text {
+  color: var(--text-color);
+}
+
+.main-nav {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 0;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--text-color);
+}
+
+.nav-link.active {
+  color: var(--text-color);
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--kavia-orange);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+/* Content Area with Sidebar */
+.content-wrapper {
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  background-color: rgba(26, 26, 26, 0.95);
+  border-right: 1px solid var(--border-color);
+  width: 260px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+  height: calc(100vh - 64px);
+  position: sticky;
+  top: 64px;
+  overflow-y: auto;
+}
+
+.sidebar.closed {
+  transform: translateX(-100%);
+  width: 0;
+}
+
+.sidebar-toggle {
+  position: absolute;
+  right: -30px;
+  top: 16px;
+  width: 30px;
+  height: 30px;
+  background-color: var(--kavia-orange);
+  border: none;
+  border-radius: 0 4px 4px 0;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+}
+
+.sidebar-content {
+  padding: 24px 16px;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+.filter-group {
+  margin-bottom: 16px;
+}
+
+.filter-group label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.filter-select {
+  width: 100%;
+  padding: 8px 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+/* Main Content Styles */
+.main-content {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+}
+
+/* Footer Styles */
+.main-footer {
+  background-color: var(--kavia-dark);
+  border-top: 1px solid var(--border-color);
+  padding: 16px 24px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    height: auto;
+    padding: 16px 12px;
+  }
+  
+  .logo-container {
+    margin-bottom: 12px;
+  }
+  
+  .main-nav {
+    margin: 8px 0;
+  }
+  
+  .sidebar {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    height: 100vh;
+  }
+  
+  .content-wrapper {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-nav {
+    gap: 12px;
+  }
+  
+  .header-actions .btn {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
