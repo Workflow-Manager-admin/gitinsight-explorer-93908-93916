@@ -111,3 +111,290 @@ body {
   padding: 12px 24px;
   font-size: 1.1rem;
 }
+
+/* Section headers */
+.section-header {
+  margin-bottom: 24px;
+}
+
+.section-header h1 {
+  margin-bottom: 8px;
+  font-size: 2rem;
+}
+
+.section-description {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-top: 0;
+}
+
+/* Search container */
+.search-container {
+  display: flex;
+  margin-bottom: 24px;
+  gap: 12px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px 16px;
+  font-size: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-color);
+}
+
+.search-btn {
+  white-space: nowrap;
+}
+
+/* Repository cards */
+.repo-list, .user-list, .trending-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.repo-card, .user-card, .trending-card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.repo-card:hover, .user-card:hover, .trending-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  border-color: var(--kavia-orange);
+}
+
+.repo-header, .trending-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.repo-title, .trending-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.repo-description, .trending-description {
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.avatar-small {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.repo-stats, .trending-stats {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  gap: 12px;
+}
+
+.stat, .trend-stat {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+.stat-label, .trend-stat-label {
+  color: var(--text-secondary);
+}
+
+.stat-value, .trend-stat-value {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.highlight {
+  color: var(--kavia-orange);
+}
+
+.repo-topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.topic-tag {
+  background-color: rgba(232, 122, 65, 0.2);
+  color: var(--kavia-orange);
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 20px;
+}
+
+/* User profiles */
+.user-card {
+  display: flex;
+  gap: 16px;
+}
+
+.user-avatar img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.user-info {
+  flex: 1;
+}
+
+.user-name {
+  margin: 0 0 4px;
+  font-size: 1.25rem;
+}
+
+.user-login {
+  color: var(--text-secondary);
+  margin: 0 0 12px;
+  font-size: 0.9rem;
+}
+
+.user-bio {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.user-details {
+  margin-bottom: 12px;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.user-stats {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.top-repos {
+  margin-top: 16px;
+}
+
+.top-repos h4 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.mini-repo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  padding: 6px 10px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.mini-repo-name {
+  font-weight: 500;
+}
+
+.mini-repo-stars {
+  color: var(--text-secondary);
+}
+
+.mini-repo-lang {
+  color: var(--kavia-orange);
+  margin-left: auto;
+}
+
+/* Trend views */
+.trends-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+.trend-section {
+  margin-bottom: 24px;
+}
+
+.trend-section h2 {
+  margin: 0 0 16px;
+  font-size: 1.5rem;
+}
+
+/* Language distribution */
+.language-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.language-item {
+  margin-bottom: 8px;
+}
+
+.language-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.language-name {
+  font-weight: 500;
+}
+
+.language-percentage {
+  color: var(--text-secondary);
+}
+
+.language-bar-container {
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 4px;
+}
+
+.language-bar {
+  height: 100%;
+  background-color: var(--kavia-orange);
+  border-radius: 4px;
+}
+
+.language-repos {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .repo-list, .user-list, .trending-list {
+    grid-template-columns: 1fr;
+  }
+  
+  .user-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .user-details, .user-stats {
+    justify-content: center;
+  }
+}
